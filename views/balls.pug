@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to the balls pug
+   div(class="container-fluid")
+        div(class="row")
+            -
+                let balls = [
+                    {
+                        "Itemname": "Cricket balls",
+                        "Quantity": 1,
+                        "price": 23
+                    },
+                    {
+                        "Itemname": "Tennis balls",
+                        "Quantity": 8,
+                        "price": 40
+                    },
+                    {
+                        "Itemname": "Volley balls",
+                        "Quantity": 5,
+                        "price": 90
+                    },                   
+                ]
+            each v,index in balls
+                table(style='width:100%', border='1')
+                  tr 
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}
+                    br
+                    br
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{v.Quantity}
+                    br
+                    br
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{v.price}
+  script.                
+        function buy(itemNumber)
+        {
+              alert(`You purchased ball is ${itemNumber + 1}`)
+        }
