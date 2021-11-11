@@ -32,14 +32,14 @@ ball({ball_type:"Cricket balls", size:'large', cost:12});
 
  let instance2 = new
 ball({ball_type:"Tennis balls", size:'large', cost:15});
- instance1.save( function(err,doc) {
+ instance2.save( function(err,doc) {
  if(err) return console.error(err);
  console.log("Second object saved")
  });
 
  let instance3 = new
  ball({ball_type:"Volley balls", size:'large', cost:16});
- instance1.save( function(err,doc) {
+ instance3.save( function(err,doc) {
  if(err) return console.error(err);
  console.log("Third object saved")
  });
