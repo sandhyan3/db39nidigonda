@@ -7,4 +7,9 @@ router.get('/costumes/:id', costume_controlers.costume_detail);
 
 /* GET detail costume page */ 
 router.get('/detail', costume_controlers.costume_view_one_Page); 
+
+/* GET create costume page */ 
+router.get('/create', costume_controlers.costume_create_Page);
+
 module.exports = router;
+
