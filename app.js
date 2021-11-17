@@ -47,7 +47,7 @@ app.use('/balls', ballsRouter);
 app.use('/addmods', addmodsRouter);
 app.use('/selector', selectorRouter);
 app.use('/resource', resource);
-app.use('/duck', duck);
+app.use('/costumes', duck);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
