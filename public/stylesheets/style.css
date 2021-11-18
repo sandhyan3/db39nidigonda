@@ -11,3 +11,23 @@ a {
   background-color: aquamarine; 
   width: 120px; 
 } 
+
+.costumeblue { 
+  background-color: rgb(126, 105, 241); 
+  width: 120px; 
+} 
+
+.costumegrey { 
+  background-color: rgb(169, 185, 180); 
+  width: 120px; 
+} 
+
+.costumeyellow { 
+  background-color: rgb(226, 247, 150); 
+  width: 120px; 
+} 
+
+.costumegreen { 
+  background-color: rgb(40, 243, 13); 
+  width: 120px; 
+} 
