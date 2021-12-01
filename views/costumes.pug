@@ -2,6 +2,7 @@ extends layout
 
 block content
     h1= title
+    a(href = "costumes/create" class="btn btn-info col-sm-2") Create
     - let items = results 
     table(class="table table-stripped table-bordered")
         thead
@@ -20,9 +21,21 @@ block content
                     td #{item.size}
                     td #{item.cost}
                     td 
-                        button.btn( class="btn-primary ml-1", onclick= `dispatch(\"/costumes/update/?id=${item._id}\")` ) Update 
+                        button.btn( class="btn-primary ml-1", onclick= `dispatch(\"/costumes/update/?id=${item._id}\")`) Update 
+                        button.btn(class="btn-danger m-1", onclick=`deleteOnid(\"/costumes/delete/?id=${item._id}\")`) Delete 
+                        button.btn(class="btn-secondary m-1", onclick=`detail(\"/costumes/detail/?id=${item._id}\")`) detail
 
                 script. 
                   function dispatch(path){ 
                     window.location.href=path 
+                  }
+
+                script. 
+                  function detail(path1) { 
+                    // Go back to the home page for the costume collection 
+                    window.location.href=path1
+                  } 
+                script. 
+                  function deleteOnid(path2) { 
+                    window.location.href=path2
                   }
